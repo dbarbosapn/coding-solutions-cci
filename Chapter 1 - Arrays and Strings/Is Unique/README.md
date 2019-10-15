@@ -29,3 +29,24 @@ public static boolean isUnique(String s) {
 ```
 
 This would take O(1) space and O(nlog(n) + n) time, which is still O(nlog(n))
+
+## Is it possible to make it O(n) time? Sure!
+
+We could make an array as big as the number of possible characters in ASCII (256 counting with the special characters).
+But, we would only store a "true" or "false" value. So, we can use bitwise operations on an integer.
+Also, if the length of the string is bigger than the number of possible characters, we already know there must be one repeated.
+
+```java
+public static boolean isUnique(String s) {
+    if (s.length() > 256) return false;
+    int stored = 0;
+    for (int i = 0; i < str.length(); i++) {
+        int val = str.charAt(i);
+        if((stored & (1 << val)) > 0) return false;
+        stored |= (1 << val);
+    }
+    return true;
+}
+```
+
+This would still take O(1) (constant, not less) space and O(n) time! Yay! :tada:
