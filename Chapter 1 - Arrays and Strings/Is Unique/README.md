@@ -40,8 +40,8 @@ Also, if the length of the string is bigger than the number of possible characte
 public static boolean isUnique(String s) {
     if (s.length() > 256) return false;
     int stored = 0;
-    for (int i = 0; i < str.length(); i++) {
-        int val = str.charAt(i);
+    for (int i = 0; i < s.length(); i++) {
+        int val = s.charAt(i);
         if((stored & (1 << val)) > 0) return false;
         stored |= (1 << val);
     }
