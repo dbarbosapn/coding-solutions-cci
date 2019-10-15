@@ -20,8 +20,6 @@ If we're supposed to not use additional space, we must manipulate the string.
 So, we can order it and then look for consecutive equal characters.
 
 ```java
-import java.util.*;
-
 public static boolean isUnique(String s) {
     char[] characters = s.toCharArray();
     Arrays.sort(characters); // According to the java API, we're using Quicksort here - O(nlog(n))
