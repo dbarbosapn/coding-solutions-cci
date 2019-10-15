@@ -22,4 +22,4 @@ public static boolean checkPermutation(String s1, String s2) {
 }
 ```
 
-This would take O(1) space and O(2n) time, which is still O(n). Since we know we have to touch every string
+This would take O(1) space and O(2n) time, which is still O(n). Since we know we have to touch every string, we know this is the best possible runtime.
