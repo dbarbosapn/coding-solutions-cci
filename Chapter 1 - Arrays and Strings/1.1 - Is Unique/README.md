@@ -14,7 +14,7 @@ public static boolean isUnique(String s) {
 
 This would take O(n) space and O(n) time, for n = number of characters.
 
-## This is actually a very good algorithm but then we're asked to do it with O(1) space, that means, no additional space.
+## This is actually a very good algorithm but then we're asked to do it with O(1) space.
 
 If we're supposed to not use additional space, we must manipulate the string.
 So, we can order it and then look for consecutive equal characters.
@@ -33,7 +33,7 @@ This would take O(1) space and O(nlog(n) + n) time, which is still O(nlog(n))
 ## Is it possible to make it O(n) time? Sure!
 
 We could make an array as big as the number of possible characters in ASCII (256 counting with the special characters).
-But, we would only store a "true" or "false" value. So, we can use bitwise operations on an integer.
+Since we will assume there will only be lowercase letters in the string we can use bitwise operations on an integer.
 Also, if the length of the string is bigger than the number of possible characters, we already know there must be one repeated.
 
 ```java
