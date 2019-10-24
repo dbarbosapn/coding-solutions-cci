@@ -1,4 +1,4 @@
-# Zero Matrix
+# String Rotation
 
 ## We're asked to implement an algorithm to check if a string is a rotation of another
 
